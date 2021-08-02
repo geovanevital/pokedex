@@ -5,11 +5,13 @@ import Back from '../../assets/icons/back.png';
 import Pokeball from '../../assets/images/pokeballBackground.png';
 import Scale from '../../assets/icons/scale.png';
 import Rule from '../../assets/icons/rule.png';
+import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
 export const Container = styled.View`
   flex: 1;
 
-  padding: 24px 8px 0 8px;
+  padding: 24px 8px 8px 8px;
+  padding-top: ${getStatusBarHeight() + 24}px;
   
   background-color: ${({ theme, type }) => colorByType(type, theme.colors)};
 `;
@@ -40,7 +42,7 @@ export const PokemonName = styled.Text`
 `;
 
 export const PokemonId = styled.Text`
-    margin-right: ${RFValue(8)}px;
+  margin-right: ${RFValue(8)}px;
 
   font-family: ${({ theme }) => theme.fonts.bold};
   font-size: ${RFValue(18)}px;
@@ -60,7 +62,7 @@ export const PokeballBackground = styled.Image.attrs({
 
 export const PokemonImage = styled.Image`
   position: absolute;
-  top: 17.5%;
+  top: ${RFValue(80)}px;
   left: 33%;
   z-index: 999;
 
@@ -68,11 +70,13 @@ export const PokemonImage = styled.Image`
   height: ${RFValue(150)}px;
 `;
 
-export const PokemonInformationsContainer = styled.View`
+export const PokemonInformationsContainer = styled.ScrollView`
   flex: 1;
-
-  margin-top: 35%;
-  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  
+  margin-top: ${RFValue(25)}%;
+  margin-bottom: 20px;
 
   background-color: ${({ theme }) => theme.colors.white};
 `;
@@ -80,7 +84,7 @@ export const PokemonInformationsContainer = styled.View`
 export const LabelsContainer = styled.View`
   flex-direction: row;
   justify-content: center;
-  margin-top: 20%;
+  margin-top: ${RFValue(15)}%;
 `;
 
 export const TypeLabelContainer = styled.View`
@@ -124,6 +128,7 @@ export const PokemonInfoContainer = styled.View`
   align-items: center;
 
   margin-top: ${RFValue(15)}px;
+  margin-bottom: ${RFValue(15)}px;
 `;
 
 export const Separator = styled.View`

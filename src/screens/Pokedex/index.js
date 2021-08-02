@@ -79,7 +79,10 @@ export function Pokedex() {
 
   return (
     <Container loading={loading_fetch_pokemons || loading_fetch_pokemon_details}>
-      <StatusBar />
+      <StatusBar
+        backgroundColor="transparent"
+        translucent
+      />
       <HeaderContainer>
         <PokeballIcon />
         <Title>Pokédex</Title>

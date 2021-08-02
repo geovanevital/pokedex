@@ -150,21 +150,20 @@ export function PokemonDetails() {
               Height
             </InformationLabel>
           </InformationContainer>
-          <Separator />
-          <InformationContainer>
-            <IconValueContainer>
-              <InformationText>
-                {move1.charAt(0).toUpperCase() + move1.slice(1)}
-              </InformationText>
-              <InformationText>
-                {` | ${move2.charAt(0).toUpperCase() + move2.slice(1)}`}
-              </InformationText>
-            </IconValueContainer>
-            <InformationLabel>
-              Moves
-            </InformationLabel>
-          </InformationContainer>
         </PokemonInfoContainer>
+        <InformationContainer>
+          <IconValueContainer>
+            <InformationText>
+              {move1.charAt(0).toUpperCase() + move1.slice(1)}
+            </InformationText>
+            <InformationText>
+              {` | ${move2.charAt(0).toUpperCase() + move2.slice(1)}`}
+            </InformationText>
+          </IconValueContainer>
+          <InformationLabel>
+            Moves
+          </InformationLabel>
+        </InformationContainer>
         <Stats />
       </PokemonInformationsContainer>
     </Container>

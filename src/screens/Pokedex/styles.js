@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import Pokeball from '../../assets/icons/pokeball.png';
 import Search from '../../assets/icons/search.png';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   flex: 1;
 
-  padding: 24px 16px 0 16px;
+  padding: 24px 12px 0 12px;
+  padding-top: ${getStatusBarHeight() + 24}px;
 
   background-color: ${({ theme }) => theme.colors.background};
   opacity: ${({ loading }) => loading ? 0.8 : 1};
