@@ -40,3 +40,22 @@ Run project in iOS environment
 yarn ios
 ```
 
+Technologies
+============
+
+. React Native
+. Styled Components
+. Redux
+. React Navigation
+
+
+API
+============
+
+https://pokeapi.co
+
+Endpoints
+============
+
+GET https://pokeapi.co/v2/pokemon?limit=40&offset=${offset}
+GET https://pokeapi.co/v2/pokemon/${pokemonId}

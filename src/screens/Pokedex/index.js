@@ -57,8 +57,8 @@ export function Pokedex() {
   };
 
   const onEndReached = () => {
-    setOffset(offset + 40);
-    dispatch(fetchPokemons(offset + 40));
+    setOffset(offset + 30);
+    dispatch(fetchPokemons(offset + 30));
   };
 
   const onSelect = (

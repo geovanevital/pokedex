@@ -14,7 +14,7 @@ export const fetchPokemons = (offset) => async (dispatch) => {
   dispatch({
     type: pokemonsActionTypes.FETCH_POKEMONS
   });
-  const searchQuery = `?limit=40&offset=${offset}`;
+  const searchQuery = `?limit=30&offset=${offset}`;
   try {
     let { data } = await api.get(`/pokemon${searchQuery}`);
     dispatch({
